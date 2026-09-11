@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f2">
+  <meta name="description" content="Рабочие инструкции Beltanee: сканирование FBS, печать сборочных заданий, хранение и планирование перемещений.">
+  <title>Beltanee — рабочие инструкции</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#content">Перейти к инструкциям</a>
+<aside class="sidebar">
+  <a class="brand" href="#top" aria-label="Beltanee — в начало"><span class="brand-mark">b.</span><span>Beltanee<span class="brand-caption">РАБОЧИЙ СПРАВОЧНИК</span></span></a>
+  <p class="nav-label">ИНСТРУКЦИИ <span>04</span></p>
+  <nav aria-label="Разделы инструкций">
+    <a href="#scanner" class="nav-link" aria-current="location"><span class="nav-num">01</span><span>FBS SCANER<small>Сканирование товаров</small></span><span class="nav-arrow">↗</span></a>
+    <a href="#converter" class="nav-link"><span class="nav-num">02</span><span>Конвертер заданий<small>Из Excel в PDF</small></span><span class="nav-arrow">↗</span></a>
+    <a href="#storage" class="nav-link"><span class="nav-num">03</span><span>FBS Хранение<small>Остатки и возвраты</small></span><span class="nav-arrow">↗</span></a>
+    <a href="#planning" class="nav-link"><span class="nav-num">04</span><span>Планирование<small>Заявки на перемещение</small></span><span class="nav-arrow">↗</span></a>
+  </nav>
+  <div class="sidebar-note"><span class="small-dot"></span> Всё для работы с FBS<p>Сервисы и таблицы открываются в новой вкладке.</p></div>
+  <div class="sidebar-footer">BELTANEE <span>Операционная команда</span></div>
+</aside>
+<main id="content">
+  <header id="top" class="page-header"><div class="eyebrow">БАЗА ЗНАНИЙ <span>/</span> FBS</div><h1>Рабочие инструкции<span>.</span></h1><p>Выберите задачу и следуйте шагам.</p></header>
+
+  <section id="scanner" class="guide" aria-labelledby="scanner-title">
+    <div class="section-head"><div><div class="eyebrow"><span class="section-no">01</span> СБОРКА ЗАКАЗОВ</div><h2 id="scanner-title">FBS SCANER</h2><p>Выбор поставки и сканирование изделий.</p></div><a class="service-link" target="_blank" rel="noopener noreferrer" href="https://fbswb.tiovskiy.ru/">Открыть сканер <span>↗</span></a></div>
+    <div class="callout violet"><span class="callout-icon" aria-hidden="true">!</span><div><strong>Сначала баркод → потом КИЗ</strong><p>Соблюдайте этот порядок для каждого изделия.</p></div></div>
+    <div class="scan-layout">
+      <ol class="steps">
+        <li><h3>Авторизуйтесь</h3><p>Откройте FBS SCANER. Логин и пароль получите у ответственного.</p></li>
+        <li><h3>Дождитесь полной загрузки</h3><p>После входа дождитесь, пока страница полностью загрузится.</p></li>
+        <li><h3>Выберите актуальную поставку</h3><p>Нажмите <b>«Поставка»</b> в верхней части экрана и выберите текущую заявку.</p><p class="inline-hint"><span class="small-dot"></span> Актуальная поставка отмечена зелёным огоньком.</p></li>
+        <li><h3>Дождитесь загрузки поставки</h3><p>Начинайте работу только после загрузки выбранной поставки.</p></li>
+        <li><h3>Начните сканирование</h3><p>У каждого изделия сначала отсканируйте <b>баркод</b>, затем <b>КИЗ</b>. После этого переходите к следующему изделию.</p></li>
+      </ol>
+      <figure class="supply-figure"><a href="assets/select-supply.png" target="_blank" rel="noopener" aria-label="Открыть скриншот выбора поставки в полном размере"><img src="assets/select-supply.png" alt="Окно «Выбери поставку»: открытая поставка в разделе «На сборке» отмечена зелёной точкой, закрытые — серой." width="529" height="591"></a><figcaption><span>01 / ПРИМЕР ЭКРАНА</span>Выбирайте свою актуальную поставку. Номер и дата на примере могут отличаться.</figcaption></figure>
+    </div>
+    <details class="screenshot-details"><summary>Как выглядит экран сканирования <span>+</span></summary><figure><a href="assets/scanner.png" target="_blank" rel="noopener"><img src="assets/scanner.png" alt="Главный экран FBS SCANER: кнопка «Поставка» сверху и поле «Сканируй штрихкод» под ней." width="1350" height="668" loading="lazy"></a><figcaption>Выбор поставки находится вверху. Поле для сканирования — под вкладкой «Сборка».</figcaption></figure></details>
+  </section>
+
+  <section id="converter" class="guide" aria-labelledby="converter-title">
+    <div class="section-head"><div><div class="eyebrow"><span class="section-no">02</span> ПЕЧАТЬ ЗАДАНИЙ</div><h2 id="converter-title">Конвертер сборочных заданий</h2><p>Подготовьте удобный список для сборки.</p></div><a class="service-link" target="_blank" rel="noopener noreferrer" href="https://golunovoleg111-rgb.github.io/FBS-CONVERTER/">Открыть конвертер <span>↗</span></a></div>
+    <div class="flow-strip" aria-label="Excel, затем конвертер, затем PDF, затем печать"><span><b>XLSX</b> Исходное задание</span><i aria-hidden="true">→</i><span>Конвертер</span><i aria-hidden="true">→</i><span><b>PDF</b> Готово к печати</span></div>
+    <ol class="steps">
+      <li><h3>Скачайте сборочное задание</h3><p>В личном кабинете Wildberries скачайте сборочное задание в формате <b>Excel</b>.</p></li>
+      <li><h3>Загрузите файл в конвертер</h3><p>Откройте конвертер и загрузите скачанное сборочное задание.</p></li>
+      <li><h3>Скачайте подготовленный PDF</h3><p>Дождитесь обработки и сохраните готовый PDF-файл.</p></li>
+      <li><h3>Распечатайте</h3><p>Откройте PDF и отправьте его на печать.</p></li>
+    </ol>
+  </section>
+
+  <section id="storage" class="guide" aria-labelledby="storage-title">
+    <div class="section-head"><div><div class="eyebrow"><span class="section-no">03</span> УЧЁТ ТОВАРОВ</div><h2 id="storage-title">FBS Хранение</h2><p>Возвраты, актуальные остатки и возврат товаров в продажу.</p></div><a class="service-link" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/11uwbxfXosJYZhhvdE2XSxU9wgYMv_jTW6oVlf1D_BBE/edit?gid=0#gid=0">Открыть таблицу <span>↗</span></a></div>
+    <h3 class="subheading">Какой лист использовать</h3>
+    <dl class="sheet-list">
+      <div><dt>Сводная</dt><dd>Актуальные остатки позиций.</dd></div>
+      <div><dt>Возврат в продажу</dt><dd>Сканируйте баркоды изделий, которые забрали из ПВЗ, чтобы корректно посчитать возвраты.</dd></div>
+      <div><dt>WB Наличие</dt><dd>Загружайте актуальный отчёт об остатках WB: <b>«Управление остатками» → «Скачать файл с товарами»</b>.</dd></div>
+      <div><dt>Пополнение остатков</dt><dd>Объединяйте поступление со свежими остатками WB и готовьте файл для продажи.</dd></div>
+    </dl>
+    <h3 class="subheading">Пополнение остатков — по порядку</h3>
+    <div class="callout amber"><span class="callout-icon" aria-hidden="true">!</span><div><strong>Сразу после выгрузки остатков загрузите заглушку на WB</strong><p>Это приостанавливает поступление новых заказов на эти позиции, пока вы работаете с заявкой.</p></div></div>
+    <ol class="steps">
+      <li><h3>Добавьте поступление</h3><p>На листе <b>«Пополнение остатков»</b> в первые столбцы <b>A:B «Приход Офис»</b> скопируйте баркоды и количество: из возвратов или актуальной заявки.</p></li>
+      <li><h3>Обновите актуальный остаток WB</h3><p>В личном кабинете откройте <b>«Управление остатками» → «Скачать файл с товарами»</b>. Сразу загрузите свежий отчёт на лист <b>«WB Наличие»</b>, чтобы обновить баркоды и количества в таблице.</p></li>
+      <li><h3>Сразу загрузите заглушку на WB</h3><p>Используйте блок <b>G:H «Заглушка»</b>: баркоды и нулевые количества. Заглушка должна охватывать позиции, с которыми вы работаете.</p></li>
+      <li><h3>Проверьте исходные остатки</h3><p>В блоке <b>D:E «Актуальный остаток WB»</b> должны быть количества из отчёта, скачанного <b>до загрузки заглушки</b>. Сохраните эти значения для расчёта пополнения.</p></li>
+      <li><h3>Проверьте результат</h3><p>Посмотрите блок <b>«Проверка лишних строк»</b> и разберите найденные несовпадения. В <b>M:N «Ставим в продажу»</b> складываются сохранённые остатки WB и поступление.</p></li>
+      <li><h3>Подготовьте файл и загрузите на WB</h3><p>Создайте отчёт из блока <b>«Ставим в продажу»</b>: только <b>баркод и количество</b>. Загрузите его в управление остатками WB.</p></li>
+    </ol>
+    <figure class="wide-figure"><a href="assets/stock.png" target="_blank" rel="noopener" aria-label="Открыть схему пополнения остатков в полном размере"><img src="assets/stock.png" alt="Лист пополнения остатков: A:B — Приход Офис, D:E — Актуальный остаток WB, G:H — Заглушка, J:K — Проверка лишних строк, M:N — Ставим в продажу." width="1269" height="541" loading="lazy"></a><figcaption><span>02 / СХЕМА ТАБЛИЦЫ</span>Нажмите на изображение, чтобы рассмотреть столбцы.</figcaption></figure>
+  </section>
+
+  <section id="planning" class="guide" aria-labelledby="planning-title">
+    <div class="section-head"><div><div class="eyebrow"><span class="section-no">04</span> ПОПОЛНЕНИЕ СКЛАДА</div><h2 id="planning-title">Планирование перемещений</h2><p>От свежих отчётов WB до зафиксированной заявки.</p></div><a class="service-link" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1xzmsRY0EJ8xUCMO925pe2lJJOYjqAQdjcTYx-Sl2Yus/edit?gid=1235928688#gid=1235928688">Открыть таблицу <span>↗</span></a></div>
+    <div class="schedule"><span class="schedule-icon" aria-hidden="true">↻</span><div><strong>Один раз в неделю</strong><p>Отчёт WB «Завершённые» за последние 14 дней + свежий отчёт по возвратам.</p></div></div>
+    <ol class="steps">
+      <li><h3>Подготовьте два отчёта</h3><p>Скачайте из WB отчёт «Завершённые» за последние 14 дней в Excel и актуальный отчёт по возвратам.</p></li>
+      <li><h3>Загрузите отчёты в папки Google Drive</h3><p>Продажи — в <b class="folder">01_WB_Продажи_Входящие</b>.<br>Возвраты — в <b class="folder">02_WB_Возвраты_Входящие</b>.</p><p>Используйте рабочие папки планировщика. Доступ к ним получите у ответственного.</p></li>
+      <li><h3>Запустите расчёт</h3><p>В таблице откройте меню <b>«🚀 Планирование FBS» → «▶ Запустить расчет»</b>.</p></li>
+      <li><h3>Дождитесь завершения скрипта</h3><p>Планировщик импортирует свежие отчёты, пересчитает данные и сформирует предварительную заявку. Не запускайте расчёт повторно, пока он выполняется.</p></li>
+      <li><h3>Проверьте заявку и дополните её</h3><p>Откройте лист <b>«11_Заявка_на_перемещение»</b>. Проверьте товары, размеры, количества и размещение. Позиции для ручного добавления внесите в оранжевые строки блока <b>«Новинки / ручной ввод»</b>.</p><div class="manual-note"><span class="orange-square" aria-hidden="true"></span> Оранжевые строки — для ручного добавления позиций.</div></li>
+      <li><h3>Зафиксируйте заявку и создайте PDF</h3><p>После проверки выберите <b>«🚀 Планирование FBS» → «📄 Зафиксировать заявку + PDF»</b>. Дождитесь завершения: создаются история заявки, резерв коробок и PDF в Google Drive.</p></li>
+    </ol>
+    <div class="callout violet"><span class="callout-icon" aria-hidden="true">i</span><div><strong>Расчёт ≠ фиксация заявки</strong><p>Обычный расчёт и предварительный PDF не резервируют коробки. Для рабочей заявки используйте «Зафиксировать заявку + PDF».</p></div></div>
+    <details class="screenshot-details"><summary>Если зафиксировали заявку по ошибке <span>+</span></summary><div class="details-body">В меню «🚀 Планирование FBS» выберите <b>«↩️ Отменить зафиксированную заявку»</b>. В истории она будет отмечена как отменённая, резерв снимется, коробки снова станут доступны.</div></details>
+  </section>
+  <footer class="page-footer"><span>Beltanee · Рабочие инструкции</span><a href="#top">В начало ↑</a></footer>
+</main>
+</body>
+</html>
